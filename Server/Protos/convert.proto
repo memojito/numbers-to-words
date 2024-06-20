@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "Server";
+
+service GrpcConvert {
+    rpc Convert(ConvertRequest) returns (ConvertResponse);
+  }
+
+message ConvertRequest {
+  double input = 1;
+}
+
+message ConvertResponse {
+  string output = 1;
+}
